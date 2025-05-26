@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:id="@+id/linearcamp"
+	android:layout_marginStart="@dimen/_5sdp"
+	android:background="@drawable/sport_selector"
+	android:clickable="true"
+	android:focusable="true"
+	android:focusableInTouchMode="true"
+	android:layout_marginTop="@dimen/_1sdp"
+	android:layout_width="@dimen/_70sdp"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:background="#00FFFFFF"
+		android:padding="@dimen/_3sdp"
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="@dimen/_40sdp"
+		android:layout_weight="5.0">
+
+			<ImageView
+				android:id="@+id/CampLogo"
+				android:layout_gravity="center"
+				android:layout_width="@dimen/_20sdp"
+				android:scaleType="fitXY"
+				android:layout_height="@dimen/_20sdp"
+				android:src="@mipmap/ic_launcher" />
+
+		<TextView
+			android:gravity="center"
+			android:maxLines="1"
+			android:layout_marginTop="@dimen/_3sdp"
+			android:layout_marginStart="@dimen/_1sdp"
+			android:layout_marginEnd="@dimen/_1sdp"
+			android:textSize="@dimen/_5sdp"
+			android:textColor="#E1E1E1"
+			android:layout_gravity="center"
+			android:id="@+id/CampName"
+			android:text="1 UFC Fight Pass"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" />
+
+
+	</LinearLayout>
+
+
+</LinearLayout>

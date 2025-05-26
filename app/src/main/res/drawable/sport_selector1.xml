@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- Estado selecionado -->
+	<item android:state_selected="true" android:drawable="@drawable/sport_sel" />
+	<!-- Estado focado -->
+	<item android:state_focused="true" android:drawable="@drawable/sport_sel" />
+	<!-- Estado normal -->
+	<item android:drawable="@color/cinzacategory1" />
+</selector>

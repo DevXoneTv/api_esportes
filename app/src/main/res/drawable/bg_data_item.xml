@@ -1,0 +1,16 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Quando focado -->
+    <item android:state_focused="true">
+        <shape android:shape="oval">
+            <solid android:color="#0080FF" /> <!-- Cor quando focado -->
+        </shape>
+    </item>
+
+    <!-- Estado normal -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#09FFFFFF" /> <!-- Cor padrão -->
+        </shape>
+    </item>
+</selector>
+
