@@ -35,7 +35,7 @@ public class ExpiredDialogFragment extends DialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.activity_expired, container, false);
+        View view = inflater.inflate(R.layout.api_expired, container, false);
         setStyle(DialogFragment.STYLE_NO_TITLE, R.style.TransparentDialog);
 
 

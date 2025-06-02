@@ -71,7 +71,7 @@
                     android:focusable="false"
                     android:focusableInTouchMode="false"
                     android:focusedByDefault="false"
-                    tools:listitem="@layout/item_data" />
+                    tools:listitem="@layout/api_item_data" />
 
                 <!-- 🔽 Seta para baixo -->
                 <ImageView
@@ -113,7 +113,7 @@
                         android:focusable="false"
                         android:focusableInTouchMode="false"
                         android:focusedByDefault="false"
-                        tools:listitem="@layout/categoryondeman" />
+                        tools:listitem="@layout/api_category" />
 
 
                 </LinearLayout>
@@ -164,7 +164,7 @@
                         android:layout_height="match_parent"
                         android:divider="@null"
                         android:dividerHeight="8.0dip"
-                        tools:listitem="@layout/game_item"
+                        tools:listitem="@layout/api_item_jogos"
                         tools:ignore="MissingConstraints" />
 
                     <LinearLayout

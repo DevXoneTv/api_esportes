@@ -28,7 +28,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
     @NonNull
     @Override
     public DataViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_data, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.api_item_data, parent, false);
         return new DataViewHolder(view);
     }
 

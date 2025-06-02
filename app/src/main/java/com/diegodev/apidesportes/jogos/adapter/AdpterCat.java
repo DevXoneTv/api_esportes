@@ -36,7 +36,7 @@ public class AdpterCat extends RecyclerView.Adapter<AdpterCat.ViewHolder> {
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.jogoscamp, parent, false);
+                .inflate(R.layout.api_item_camp, parent, false);
         return new ViewHolder(view);
     }
 
