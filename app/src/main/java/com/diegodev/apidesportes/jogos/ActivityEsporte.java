@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -46,7 +47,7 @@ public class ActivityEsporte extends AppCompatActivity {
     private RecyclerView recyclerViewCate, listView,recyclerViewDatas;
     private AdpterCat adapter;
     private  String url = "";
-    private String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiIxMjM0NTY3OCIsImlhdCI6MTc0Nzk0NTIxMiwiZXhwIjoxNzQ4MDMxNjEyfQ.rzxDY2RSK678K3tQATQ8VRxiSuciDb3QUGYSW4utXwE";
+    private String token;
     private static final String TAG = "EsporteActivity";
     private CategoriaDatabase db;
     private JogosDatabase dbjogos;
@@ -55,6 +56,9 @@ public class ActivityEsporte extends AppCompatActivity {
     private final int MAX_TENTATIVAS = 7;
     private Handler handler = new Handler(Looper.getMainLooper());
     public static String horaBaseFormatada = "";
+
+    private static final String PREFS_NAME = "ApiEsporteBrPrefs";
+    private static final String KEY_TOKEN = "token";
 
 
 
@@ -69,6 +73,14 @@ public class ActivityEsporte extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         setContentView(R.layout.frame_esportes); // usando o mesmo layout do fragmento
+
+        String token1 = getToken();
+        if (!token1.isEmpty()) {
+            token = token1;
+        }else{
+            Toast.makeText(getApplicationContext(), "Token Invalido ou Vazio", Toast.LENGTH_LONG).show();
+            finish();
+        }
 
         salvarHoraRedeSaoPaulo(this);
 
@@ -100,6 +112,13 @@ public class ActivityEsporte extends AppCompatActivity {
 
 
     }
+
+    public String getToken() {
+        SharedPreferences prefs = this.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        // Recupera o valor salvo na chave "token". Se não existir, retorna uma string vazia.
+        return prefs.getString("token", "");
+    }
+
 
     private void InicarApi(){
 
